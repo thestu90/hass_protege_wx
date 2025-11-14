@@ -1,7 +1,7 @@
 {
   "domain": "protege",
   "name": "Protege WX",
-  "codeowners": ["@custom"],
+  "codeowners": ["@thestu90"],
   "config_flow": true,
   "dependencies": [],
   "documentation": "https://github.com/custom/protege",
