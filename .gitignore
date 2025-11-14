@@ -1,0 +1,5 @@
+# Ignore everything except your HA component
+*.pyc
+__pycache__/
+*.log
+.env
