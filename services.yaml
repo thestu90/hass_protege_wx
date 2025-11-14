@@ -1,0 +1,96 @@
+output_on_timed:
+  name: Activate Output for Time
+  description: Turn on an output for a specified duration
+  fields:
+    entity_id:
+      name: Output
+      description: The output switch entity to control
+      required: true
+      selector:
+        entity:
+          domain: switch
+          integration: protege
+    duration:
+      name: Duration
+      description: How long to keep the output on (in seconds)
+      required: true
+      example: 30
+      selector:
+        number:
+          min: 1
+          max: 65535
+          unit_of_measurement: seconds
+
+bypass_input:
+  name: Bypass Input
+  description: Bypass a Protege input
+  fields:
+    entity_id:
+      name: Input
+      description: The input binary sensor entity to bypass
+      required: true
+      selector:
+        entity:
+          domain: binary_sensor
+          integration: protege
+    permanent:
+      name: Permanent
+      description: Whether the bypass should be permanent (true) or temporary (false)
+      required: false
+      default: false
+      selector:
+        boolean:
+
+remove_input_bypass:
+  name: Remove Input Bypass
+  description: Remove bypass from a Protege input
+  fields:
+    entity_id:
+      name: Input
+      description: The input binary sensor entity
+      required: true
+      selector:
+        entity:
+          domain: binary_sensor
+          integration: protege
+
+discover_devices:
+  name: Discover Devices
+  description: Manually scan for Protege devices (doors, inputs, outputs) in a specific range
+  fields:
+    device_type:
+      name: Device Type
+      description: Type of devices to discover
+      required: false
+      default: "all"
+      selector:
+        select:
+          options:
+            - label: "All Devices"
+              value: "all"
+            - label: "Doors Only"
+              value: "door"
+            - label: "Inputs Only"
+              value: "input"
+            - label: "Outputs Only"
+              value: "output"
+    start_index:
+      name: Start Index
+      description: Starting index to scan from
+      required: false
+      default: 1
+      selector:
+        number:
+          min: 1
+          max: 1000
+          mode: box
+    end_index:
+      name: End Index
+      description: Ending index to scan to
+      required: false
+      default: 20
+      selector:
+        number:
+          min: 1
+          max: 1000
+          mode: box

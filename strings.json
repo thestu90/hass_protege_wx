@@ -1,0 +1,21 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to Protege",
+        "description": "Enter your Protege system connection details",
+        "data": {
+          "host": "IP Address",
+          "port": "Port",
+          "pin": "PIN Code (numeric, up to 6 digits)"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Failed to connect to Protege system"
+    },
+    "abort": {
+      "already_configured": "This Protege system is already configured"
+    }
+  }
+}

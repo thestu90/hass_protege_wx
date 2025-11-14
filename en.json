@@ -1,0 +1,21 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to Protege",
+        "description": "Enter your Protege system connection details. The PIN should be a numeric code (up to 6 digits) configured in your Protege system for automation service access.",
+        "data": {
+          "host": "IP Address",
+          "port": "Port",
+          "pin": "PIN Code"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Failed to connect to Protege system. Please check your connection details and ensure the Automation Service is enabled."
+    },
+    "abort": {
+      "already_configured": "This Protege system is already configured."
+    }
+  }
+}
