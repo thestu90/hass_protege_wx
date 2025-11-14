@@ -1,11 +1,9 @@
 {
-  "domain": "protege",
+  "domain": "protege_wx",
   "name": "Protege WX",
-  "codeowners": ["@thestu90"],
+  "version": "1.0.0",
+  "requires": ["homeassistant"],
   "config_flow": true,
-  "dependencies": [],
-  "documentation": "https://github.com/custom/protege",
-  "iot_class": "local_push",
-  "requirements": [],
-  "version": "1.0.0"
+  "documentation": "https://github.com/thestu90/hass_protege_wx",
+  "codeowners": ["@thestu90"]
 }
